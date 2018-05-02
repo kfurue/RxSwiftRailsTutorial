@@ -14,6 +14,9 @@
 		B9250FCE2099B00900762076 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B9250FCC2099B00900762076 /* LaunchScreen.storyboard */; };
 		B9250FD92099B00900762076 /* RxSwiftRailsTutorialTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9250FD82099B00900762076 /* RxSwiftRailsTutorialTests.swift */; };
 		B9250FE42099B00A00762076 /* RxSwiftRailsTutorialUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9250FE32099B00A00762076 /* RxSwiftRailsTutorialUITests.swift */; };
+		B9250FF42099B40000762076 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9250FF22099B40000762076 /* RxCocoa.framework */; };
+		B9250FF52099B40000762076 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9250FF32099B40000762076 /* Alamofire.framework */; };
+		B9250FF82099B48700762076 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9250FF72099B48700762076 /* RxSwift.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		B9250FDF2099B00A00762076 /* RxSwiftRailsTutorialUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RxSwiftRailsTutorialUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9250FE32099B00A00762076 /* RxSwiftRailsTutorialUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RxSwiftRailsTutorialUITests.swift; sourceTree = "<group>"; };
 		B9250FE52099B00A00762076 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B9250FF22099B40000762076 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
+		B9250FF32099B40000762076 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		B9250FF72099B48700762076 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +60,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9250FF42099B40000762076 /* RxCocoa.framework in Frameworks */,
+				B9250FF52099B40000762076 /* Alamofire.framework in Frameworks */,
+				B9250FF82099B48700762076 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,7 @@
 				B9250FD72099B00900762076 /* RxSwiftRailsTutorialTests */,
 				B9250FE22099B00A00762076 /* RxSwiftRailsTutorialUITests */,
 				B9250FC12099B00400762076 /* Products */,
+				B9250FF12099B40000762076 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +135,16 @@
 			path = RxSwiftRailsTutorialUITests;
 			sourceTree = "<group>";
 		};
+		B9250FF12099B40000762076 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B9250FF72099B48700762076 /* RxSwift.framework */,
+				B9250FF32099B40000762076 /* Alamofire.framework */,
+				B9250FF22099B40000762076 /* RxCocoa.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +155,7 @@
 				B9250FBC2099B00300762076 /* Sources */,
 				B9250FBD2099B00300762076 /* Frameworks */,
 				B9250FBE2099B00300762076 /* Resources */,
+				B9250FF62099B40B00762076 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -250,6 +271,28 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B9250FF62099B40B00762076 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		B9250FBC2099B00300762076 /* Sources */ = {
@@ -432,6 +475,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L6J6597M8N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxSwiftRailsTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +497,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L6J6597M8N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxSwiftRailsTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

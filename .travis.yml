@@ -1,0 +1,12 @@
+osx_image: xcode9.3
+language: objective-c
+cache:
+  directories:
+  - Pods
+  - Carthage
+before_install:
+  - bin/bootstrap-if-needed
+script:
+    - fastlane action swiftlint
+    - fastlane scan --project "RxSwiftRailsTutorial.xcodeproj" --scheme "RxSwiftRailsTutorial" -- device "iPhone X" --clean
+

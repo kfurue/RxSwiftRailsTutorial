@@ -8,5 +8,5 @@ before_install:
   - bin/bootstrap-if-needed
 script:
     - fastlane action swiftlint
-    - fastlane scan --project "RxSwiftRailsTutorial.xcodeproj" --scheme "RxSwiftRailsTutorial" -- device "iPhone X" --clean
+    - fastlane scan --project "RxSwiftRailsTutorial.xcodeproj" --scheme "RxSwiftRailsTutorial" --device "iPhone X" --clean
 

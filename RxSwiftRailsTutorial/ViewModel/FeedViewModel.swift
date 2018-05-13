@@ -13,7 +13,7 @@ final class FeedViewModel {
     let feeds: Variable<[Micropost]> = Variable([Micropost]())
     private var disposeBag = DisposeBag()
 
-    func fetchUsers() {
+    func fetchFeeds() {
         disposeBag = DisposeBag()
         FeedAPI.getApiV1Feed().subscribe(onNext: { [unowned self] feeds in
             self.feeds.value += feeds

@@ -12,7 +12,7 @@ import Foundation
 open class Picture: Codable {
 
     /** URL of picture.(It will be &#x60;null&#x60; if there are no picture.) */
-    public var url: String
+    public var url: String?
 
 
     
@@ -35,7 +35,7 @@ open class Picture: Codable {
     public required init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: String.self)
 
-        url = try container.decode(String.self, forKey: "url")
+        url = try container.decodeIfPresent(String.self, forKey: "url")
     }
 }
 

@@ -35,12 +35,37 @@ class RxSwiftRailsTutorialTests: XCTestCase {
             print(error as Any)
             imageDownloadExpectation?.fulfill()
         }
-        waitForExpectations(timeout: 5, handler:nil)
+        waitForExpectations(timeout: 5, handler: nil)
     }
 
     func testJsonParse() {
         let json = """
-[{\"id\":300,\"content\":\"Voluptate tenetur quia culpa explicabo et.\",\"user_id\":6,\"picture\":{\"url\":null}},{\"id\":299,\"content\":\"Voluptate tenetur quia culpa explicabo et.\",\"user_id\":5,\"picture\":{\"url\":null}},{\"id\":298,\"content\":\"Voluptate tenetur quia culpa explicabo et.\",\"user_id\":4,\"picture\":{\"url\":null}},{\"id\":297,\"content\":\"Voluptate tenetur quia culpa explicabo et.\",\"user_id\":3,\"picture\":{\"url\":null}},{\"id\":295,\"content\":\"Voluptate tenetur quia culpa explicabo et.\",\"user_id\":1,\"picture\":{\"url\":null}},{\"id\":294,\"content\":\"Mollitia nemo earum minus ad inventore.\",\"user_id\":6,\"picture\":{\"url\":null}}]
+[
+    {
+      "id": 300,
+      "content": "Voluptate tenetur quia culpa explicabo et.",
+      "user_id": 6,
+      "picture": {
+        "url": null
+      }
+    },
+    {
+      "id": 299,
+      "content": "Voluptate tenetur quia culpa explicabo et.",
+      "user_id": 5,
+      "picture": {
+        "url": null
+      }
+    },
+    {
+      "id": 298,
+      "content": "Voluptate tenetur quia culpa explicabo et.",
+      "user_id": 4,
+      "picture": {
+        "url": null
+      }
+    }
+]
 """
 
         let decoder = JSONDecoder()

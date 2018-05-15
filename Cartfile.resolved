@@ -1,3 +1,4 @@
 github "Alamofire/Alamofire" "4.7.2"
 github "OAuthSwift/OAuthSwift" "1.2.1"
 github "ReactiveX/RxSwift" "4.1.2"
+github "kishikawakatsumi/KeychainAccess" "v3.1.1"

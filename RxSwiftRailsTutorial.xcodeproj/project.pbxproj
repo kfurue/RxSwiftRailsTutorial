@@ -35,6 +35,7 @@
 		B93B1B6C209EC98D00AD3424 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B1B5C209EC98D00AD3424 /* Configuration.swift */; };
 		B98033FE209F455000DB6BB7 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B1B6E209ECDD900AD3424 /* FeedViewModel.swift */; };
 		B9EB6AC620AA5F2C004976BF /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EB6AC520AA5F2C004976BF /* OAuthSwift.framework */; };
+		B9EB6AC820AA8CB9004976BF /* KeychainAccess.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EB6AC720AA8CB9004976BF /* KeychainAccess.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -89,6 +90,7 @@
 		B93B1B5C209EC98D00AD3424 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		B93B1B6E209ECDD900AD3424 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		B9EB6AC520AA5F2C004976BF /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
+		B9EB6AC720AA8CB9004976BF /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 				B9250FF52099B40000762076 /* Alamofire.framework in Frameworks */,
 				B9250FF82099B48700762076 /* RxSwift.framework in Frameworks */,
 				B9EB6AC620AA5F2C004976BF /* OAuthSwift.framework in Frameworks */,
+				B9EB6AC820AA8CB9004976BF /* KeychainAccess.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +180,7 @@
 		B9250FF12099B40000762076 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9EB6AC720AA8CB9004976BF /* KeychainAccess.framework */,
 				B9EB6AC520AA5F2C004976BF /* OAuthSwift.framework */,
 				B9250FF72099B48700762076 /* RxSwift.framework */,
 				B9250FF32099B40000762076 /* Alamofire.framework */,
@@ -386,12 +390,14 @@
 				"$(SRCROOT)/Carthage/Build/iOS/RxCocoa.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/OAuthSwift.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/KeychainAccess.framework",
 			);
 			outputPaths = (
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxCocoa.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxSwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/OAuthSwift.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/KeychainAccess.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;

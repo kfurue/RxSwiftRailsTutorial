@@ -35,6 +35,9 @@
 		B93B1B6C209EC98D00AD3424 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B1B5C209EC98D00AD3424 /* Configuration.swift */; };
 		B93DB1D020B2250000108C7B /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93DB1CF20B2250000108C7B /* UITableViewCellExtension.swift */; };
 		B93DB1D220B2251B00108C7B /* Nibable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93DB1D120B2251B00108C7B /* Nibable.swift */; };
+		B93DB1D520B3724D00108C7B /* MicropostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93DB1D320B3724D00108C7B /* MicropostTableViewCell.swift */; };
+		B93DB1D620B3724D00108C7B /* MicropostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = B93DB1D420B3724D00108C7B /* MicropostTableViewCell.xib */; };
+		B93DB1D820B3729F00108C7B /* UITableViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93DB1D720B3729F00108C7B /* UITableViewExtension.swift */; };
 		B98033FE209F455000DB6BB7 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B1B6E209ECDD900AD3424 /* FeedViewModel.swift */; };
 		B99972C920AC08CF00A7C597 /* OauthRailsTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99972C820AC08CF00A7C597 /* OauthRailsTutorial.swift */; };
 		B9EB6AC620AA5F2C004976BF /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EB6AC520AA5F2C004976BF /* OAuthSwift.framework */; };
@@ -94,6 +97,9 @@
 		B93B1B6E209ECDD900AD3424 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		B93DB1CF20B2250000108C7B /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
 		B93DB1D120B2251B00108C7B /* Nibable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nibable.swift; sourceTree = "<group>"; };
+		B93DB1D320B3724D00108C7B /* MicropostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicropostTableViewCell.swift; sourceTree = "<group>"; };
+		B93DB1D420B3724D00108C7B /* MicropostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MicropostTableViewCell.xib; sourceTree = "<group>"; };
+		B93DB1D720B3729F00108C7B /* UITableViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewExtension.swift; sourceTree = "<group>"; };
 		B99972C820AC08CF00A7C597 /* OauthRailsTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OauthRailsTutorial.swift; sourceTree = "<group>"; };
 		B9EB6AC520AA5F2C004976BF /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
 		B9EB6AC720AA8CB9004976BF /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
@@ -163,7 +169,10 @@
 				B9250FCF2099B00900762076 /* Info.plist */,
 				B93B1B48209EC98D00AD3424 /* SampleAppClient */,
 				B93DB1CF20B2250000108C7B /* UITableViewCellExtension.swift */,
+				B93DB1D720B3729F00108C7B /* UITableViewExtension.swift */,
 				B93DB1D120B2251B00108C7B /* Nibable.swift */,
+				B93DB1D320B3724D00108C7B /* MicropostTableViewCell.swift */,
+				B93DB1D420B3724D00108C7B /* MicropostTableViewCell.xib */,
 			);
 			path = RxSwiftRailsTutorial;
 			sourceTree = "<group>";
@@ -368,6 +377,7 @@
 			files = (
 				B9250FCE2099B00900762076 /* LaunchScreen.storyboard in Resources */,
 				B9250FCB2099B00900762076 /* Assets.xcassets in Resources */,
+				B93DB1D620B3724D00108C7B /* MicropostTableViewCell.xib in Resources */,
 				B9250FC92099B00400762076 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,11 +432,13 @@
 				B98033FE209F455000DB6BB7 /* FeedViewModel.swift in Sources */,
 				B93B1B67209EC98D00AD3424 /* User.swift in Sources */,
 				B93B1B6B209EC98D00AD3424 /* Models.swift in Sources */,
+				B93DB1D820B3729F00108C7B /* UITableViewExtension.swift in Sources */,
 				B93B1B66209EC98D00AD3424 /* Picture.swift in Sources */,
 				B93B1B68209EC98D00AD3424 /* Micropost.swift in Sources */,
 				B93B1B64209EC98D00AD3424 /* JSONEncodableEncoding.swift in Sources */,
 				B93B1B6A209EC98D00AD3424 /* JSONEncodingHelper.swift in Sources */,
 				B93B1B5D209EC98D00AD3424 /* APIHelper.swift in Sources */,
+				B93DB1D520B3724D00108C7B /* MicropostTableViewCell.swift in Sources */,
 				B93B1B60209EC98D00AD3424 /* UsersAPI.swift in Sources */,
 				B9250FC62099B00400762076 /* ViewController.swift in Sources */,
 				B93B1B62209EC98D00AD3424 /* MicropostsAPI.swift in Sources */,

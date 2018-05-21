@@ -33,6 +33,8 @@
 		B93B1B6A209EC98D00AD3424 /* JSONEncodingHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B1B5A209EC98D00AD3424 /* JSONEncodingHelper.swift */; };
 		B93B1B6B209EC98D00AD3424 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B1B5B209EC98D00AD3424 /* Models.swift */; };
 		B93B1B6C209EC98D00AD3424 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B1B5C209EC98D00AD3424 /* Configuration.swift */; };
+		B93DB1D020B2250000108C7B /* UITableViewCellExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93DB1CF20B2250000108C7B /* UITableViewCellExtension.swift */; };
+		B93DB1D220B2251B00108C7B /* Nibable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93DB1D120B2251B00108C7B /* Nibable.swift */; };
 		B98033FE209F455000DB6BB7 /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B1B6E209ECDD900AD3424 /* FeedViewModel.swift */; };
 		B99972C920AC08CF00A7C597 /* OauthRailsTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B99972C820AC08CF00A7C597 /* OauthRailsTutorial.swift */; };
 		B9EB6AC620AA5F2C004976BF /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9EB6AC520AA5F2C004976BF /* OAuthSwift.framework */; };
@@ -90,6 +92,8 @@
 		B93B1B5B209EC98D00AD3424 /* Models.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		B93B1B5C209EC98D00AD3424 /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		B93B1B6E209ECDD900AD3424 /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		B93DB1CF20B2250000108C7B /* UITableViewCellExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewCellExtension.swift; sourceTree = "<group>"; };
+		B93DB1D120B2251B00108C7B /* Nibable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Nibable.swift; sourceTree = "<group>"; };
 		B99972C820AC08CF00A7C597 /* OauthRailsTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OauthRailsTutorial.swift; sourceTree = "<group>"; };
 		B9EB6AC520AA5F2C004976BF /* OAuthSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OAuthSwift.framework; path = Carthage/Build/iOS/OAuthSwift.framework; sourceTree = "<group>"; };
 		B9EB6AC720AA8CB9004976BF /* KeychainAccess.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = KeychainAccess.framework; path = Carthage/Build/iOS/KeychainAccess.framework; sourceTree = "<group>"; };
@@ -158,6 +162,8 @@
 				B9250FCC2099B00900762076 /* LaunchScreen.storyboard */,
 				B9250FCF2099B00900762076 /* Info.plist */,
 				B93B1B48209EC98D00AD3424 /* SampleAppClient */,
+				B93DB1CF20B2250000108C7B /* UITableViewCellExtension.swift */,
+				B93DB1D120B2251B00108C7B /* Nibable.swift */,
 			);
 			path = RxSwiftRailsTutorial;
 			sourceTree = "<group>";
@@ -428,9 +434,11 @@
 				B93B1B5F209EC98D00AD3424 /* RelationshipsAPI.swift in Sources */,
 				B93B1B6C209EC98D00AD3424 /* Configuration.swift in Sources */,
 				B93B1B69209EC98D00AD3424 /* Extensions.swift in Sources */,
+				B93DB1D220B2251B00108C7B /* Nibable.swift in Sources */,
 				B93B1B61209EC98D00AD3424 /* FeedAPI.swift in Sources */,
 				B93B1B5E209EC98D00AD3424 /* AlamofireImplementations.swift in Sources */,
 				B93B1B63209EC98D00AD3424 /* CodableHelper.swift in Sources */,
+				B93DB1D020B2250000108C7B /* UITableViewCellExtension.swift in Sources */,
 				B9250FC42099B00400762076 /* AppDelegate.swift in Sources */,
 				B99972C920AC08CF00A7C597 /* OauthRailsTutorial.swift in Sources */,
 			);

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MicropostTableViewCell: UITableViewCell {
+class MicropostTableViewCell: UITableViewCell, Nibable {
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +19,11 @@ class MicropostTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+
+    func configure(micropost: Micropost) {
+        textLabel?.text? = micropost.content
+        detailTextLabel?.text? = String(micropost.userId)
     }
 
 }

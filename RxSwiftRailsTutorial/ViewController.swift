@@ -38,13 +38,12 @@ class ViewController: UIViewController {
     }
 
     private func configureObserver() {
-        feedTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
 
         viewModel.feeds.asDriver().drive(
             feedTableView.rx.items(cellIdentifier: MicropostTableViewCell.identifier,
                                    cellType: MicropostTableViewCell.self),
             curriedArgument: { row, micropost, cell in
-                cell.textLabel?.text = String(row) + micropost.content
+                cell.configure(micropost: micropost)
         }).disposed(by: disposeBag)
     }
 

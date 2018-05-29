@@ -21,6 +21,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        feedTableView.register(MicropostTableViewCell.self)
         configureObserver()
     }
 
@@ -37,12 +38,12 @@ class ViewController: UIViewController {
     }
 
     private func configureObserver() {
-        feedTableView.register(UITableViewCell.self, forCellReuseIdentifier: "Cell")
 
         viewModel.feeds.asDriver().drive(
-            feedTableView.rx.items(cellIdentifier: "Cell"),
-            curriedArgument: {_, micropost, cell in
-                cell.textLabel?.text = micropost.content
+            feedTableView.rx.items(cellIdentifier: MicropostTableViewCell.identifier,
+                                   cellType: MicropostTableViewCell.self),
+            curriedArgument: { row, micropost, cell in
+                cell.configure(micropost: micropost)
         }).disposed(by: disposeBag)
     }
 

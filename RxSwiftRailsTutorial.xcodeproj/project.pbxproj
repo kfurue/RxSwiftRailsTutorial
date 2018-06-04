@@ -17,6 +17,9 @@
 		B9250FF42099B40000762076 /* RxCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9250FF22099B40000762076 /* RxCocoa.framework */; };
 		B9250FF52099B40000762076 /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9250FF32099B40000762076 /* Alamofire.framework */; };
 		B9250FF82099B48700762076 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9250FF72099B48700762076 /* RxSwift.framework */; };
+		B9339D0620C4AD640051FE3E /* FeedViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9339D0520C4AD640051FE3E /* FeedViewModelTests.swift */; };
+		B9339D0920C602410051FE3E /* RxBlocking.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9339D0720C602410051FE3E /* RxBlocking.framework */; };
+		B9339D0A20C602410051FE3E /* RxTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9339D0820C602410051FE3E /* RxTest.framework */; };
 		B93B1B5D209EC98D00AD3424 /* APIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B1B4B209EC98D00AD3424 /* APIHelper.swift */; };
 		B93B1B5E209EC98D00AD3424 /* AlamofireImplementations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B1B4C209EC98D00AD3424 /* AlamofireImplementations.swift */; };
 		B93B1B5F209EC98D00AD3424 /* RelationshipsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93B1B4E209EC98D00AD3424 /* RelationshipsAPI.swift */; };
@@ -78,6 +81,9 @@
 		B9250FF22099B40000762076 /* RxCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxCocoa.framework; path = Carthage/Build/iOS/RxCocoa.framework; sourceTree = "<group>"; };
 		B9250FF32099B40000762076 /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		B9250FF72099B48700762076 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		B9339D0520C4AD640051FE3E /* FeedViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModelTests.swift; sourceTree = "<group>"; };
+		B9339D0720C602410051FE3E /* RxBlocking.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxBlocking.framework; path = Carthage/Build/iOS/RxBlocking.framework; sourceTree = "<group>"; };
+		B9339D0820C602410051FE3E /* RxTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxTest.framework; path = Carthage/Build/iOS/RxTest.framework; sourceTree = "<group>"; };
 		B93B1B4B209EC98D00AD3424 /* APIHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIHelper.swift; sourceTree = "<group>"; };
 		B93B1B4C209EC98D00AD3424 /* AlamofireImplementations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireImplementations.swift; sourceTree = "<group>"; };
 		B93B1B4E209EC98D00AD3424 /* RelationshipsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RelationshipsAPI.swift; sourceTree = "<group>"; };
@@ -122,6 +128,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9339D0920C602410051FE3E /* RxBlocking.framework in Frameworks */,
+				B9339D0A20C602410051FE3E /* RxTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -181,6 +189,7 @@
 			isa = PBXGroup;
 			children = (
 				B9250FD82099B00900762076 /* RxSwiftRailsTutorialTests.swift */,
+				B9339D0520C4AD640051FE3E /* FeedViewModelTests.swift */,
 				B9250FDA2099B00A00762076 /* Info.plist */,
 			);
 			path = RxSwiftRailsTutorialTests;
@@ -198,6 +207,8 @@
 		B9250FF12099B40000762076 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9339D0720C602410051FE3E /* RxBlocking.framework */,
+				B9339D0820C602410051FE3E /* RxTest.framework */,
 				B9EB6AC720AA8CB9004976BF /* KeychainAccess.framework */,
 				B9EB6AC520AA5F2C004976BF /* OAuthSwift.framework */,
 				B9250FF72099B48700762076 /* RxSwift.framework */,
@@ -298,6 +309,7 @@
 				B9250FD02099B00900762076 /* Sources */,
 				B9250FD12099B00900762076 /* Frameworks */,
 				B9250FD22099B00900762076 /* Resources */,
+				B9339D0B20C602DE0051FE3E /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -422,6 +434,23 @@
 			shellPath = /bin/sh;
 			shellScript = "/usr/local/bin/carthage copy-frameworks";
 		};
+		B9339D0B20C602DE0051FE3E /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxBlocking.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/RxTest.framework",
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxBlocking.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/RxTest.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -460,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9339D0620C4AD640051FE3E /* FeedViewModelTests.swift in Sources */,
 				B9250FD92099B00900762076 /* RxSwiftRailsTutorialTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -672,6 +702,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L6J6597M8N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxSwiftRailsTutorialTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -693,6 +727,10 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L6J6597M8N;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = RxSwiftRailsTutorialTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
